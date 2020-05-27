@@ -3,7 +3,7 @@ import React from "react";
 
 // src
 import { ContextProvider as NotificationProvider } from "./contextProviders/ContextProvider";
-import Books from "./examples/Books/Books";
+import Books from "./examples/Books";
 import "./App.css";
 
 function App() {
