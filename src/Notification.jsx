@@ -4,11 +4,11 @@ import ReactDOM from "react-dom";
 import Snackbar from "@material-ui/core/Snackbar";
 
 // src
-import { useNotificationContext } from "./useNotificationContext";
+import { useNotificationContext } from "./contextProviders/useNotificationContext";
 
 export const Notification = ({ message }) => {
-  let { isOpen } = useNotificationContext();
-  console.log("is open", isOpen);
+  const { isOpen } = useNotificationContext();
+
   return ReactDOM.createPortal(
     <Snackbar
       anchorOrigin={{ vertical: "top", horizontal: "right" }}

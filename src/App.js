@@ -2,7 +2,7 @@
 import React from "react";
 
 // src
-import { ContextProvider as NotificationProvider } from "./ContextProvider";
+import { ContextProvider as NotificationProvider } from "./contextProviders/ContextProvider";
 import Books from "./examples/Books/Books";
 import "./App.css";
 
