@@ -40,7 +40,7 @@ const Books = () => {
     <div className="books">
       {/* Books */}
       <div className="list">
-        <h2>Demo using withNotification HOC</h2>
+        <h3>Demo using withNotification HOC</h3>
         {books.map((name) => (
           <Book name={name} onAddToReadingList={handleAdd} />
         ))}
@@ -48,7 +48,7 @@ const Books = () => {
 
       {/* Reading List */}
       <div className="list">
-        <h2>Demo using Context APi</h2>
+        <h3>Demo using Context APi</h3>
         {readingList.map((name) => (
           <ReadingList name={name} onRemove={handleRemove} />
         ))}
