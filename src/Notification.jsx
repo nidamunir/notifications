@@ -7,15 +7,13 @@ import Snackbar from "@material-ui/core/Snackbar";
 import { useNotificationContext } from "./useNotificationContext";
 
 export const Notification = ({ message }) => {
-  let { modal, handleClose } = useNotificationContext();
+  let { isOpen } = useNotificationContext();
 
   return ReactDOM.createPortal(
     <Snackbar
-      anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-      open={modal}
-      autoHideDuration={3000}
+      anchorOrigin={{ vertical: "top", horizontal: "right" }}
+      open={isOpen}
       message={message}
-      onClose={handleClose}
     />,
     document.body
   );
