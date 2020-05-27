@@ -41,6 +41,7 @@ const Books = () => {
       {/* Books */}
       <div className="list">
         <h3>Demo using withNotification HOC</h3>
+        <h5>Books </h5>
         {books.map((name) => (
           <Book name={name} onAddToReadingList={handleAdd} />
         ))}
@@ -49,9 +50,19 @@ const Books = () => {
       {/* Reading List */}
       <div className="list">
         <h3>Demo using Context APi</h3>
-        {readingList.map((name) => (
-          <ReadingList name={name} onRemove={handleRemove} />
-        ))}
+        <h5>Reading List</h5>
+        {readingList.length ? (
+          readingList.map((name) => (
+            <ReadingList name={name} onRemove={handleRemove} />
+          ))
+        ) : (
+          <>
+            <span>Your reading list is empty.</span>
+            <span>
+              Please click save icon to add a book to your reading list.
+            </span>
+          </>
+        )}
       </div>
     </div>
   );
