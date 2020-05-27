@@ -4,13 +4,13 @@ import IconButton from "@material-ui/core/IconButton";
 import ClearIcon from "@material-ui/icons/Clear";
 
 // src
-import { useNotification } from "../../useNotification";
+import { useNotificationContext } from "../../useNotificationContext";
 
 // styles
 import "./Books.css";
 
 export const ReadingList = ({ name, onRemove }) => {
-  let { showNotification } = useNotification();
+  let { showNotification } = useNotificationContext();
 
   return (
     <>

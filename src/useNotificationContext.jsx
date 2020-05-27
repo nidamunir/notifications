@@ -4,4 +4,4 @@ import { useContext } from "react";
 // src
 import { NotificationContext } from "./ContextProvider";
 
-export const useNotification = () => useContext(NotificationContext);
+export const useNotificationContext = () => useContext(NotificationContext);
