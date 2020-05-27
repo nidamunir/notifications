@@ -13,10 +13,10 @@ const names = ["White Collar", "Sherlock Holmes"];
 function App() {
   return (
     <div className="App">
+      {names.map((name, index) => (
+        <Movie name={`${name}`} />
+      ))}
       <NotificationProvider>
-        {names.map((name, index) => (
-          <Movie name={`${name}`} />
-        ))}
         <Component />
         <Component />
       </NotificationProvider>

@@ -5,7 +5,7 @@ import IconButton from "@material-ui/core/IconButton";
 // save
 import withNotification from "./withNotification";
 
-const Movie = ({ name, onSave: showNotification }) => {
+const Movie = ({ name, showNotification }) => {
   return (
     <div>
       {name}
