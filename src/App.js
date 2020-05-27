@@ -2,21 +2,19 @@
 import React from "react";
 
 // src
-import Movie from "./hoc/Movie";
 import Component from "./Component";
 import "./App.css";
 
 import { ContextProvider as NotificationProvider } from "./ContextProvider";
-
-const names = ["White Collar", "Sherlock Holmes"];
+import Books from "./examples/Books/Books";
 
 function App() {
   return (
     <div className="App">
-      {names.map((name, index) => (
-        <Movie name={`${name}`} />
-      ))}
       <NotificationProvider>
+        <h2>Demo using withNotification HOC</h2>
+        <Books />
+        <h5>*****************</h5>
         <Component />
         <Component />
       </NotificationProvider>

@@ -1,16 +1,23 @@
 // lib
 import React from "react";
-import Save from "@material-ui/icons/Bookmark";
+import Bookmark from "@material-ui/icons/Bookmark";
 import IconButton from "@material-ui/core/IconButton";
-// save
-import withNotification from "./withNotification";
+
+// src
+import withNotification from "../../hoc/withNotification";
 
 const Movie = ({ name, showNotification }) => {
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+      }}
+    >
       {name}
       <IconButton onClick={() => showNotification(name)}>
-        <Save />
+        <Bookmark />
       </IconButton>
     </div>
   );
