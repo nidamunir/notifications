@@ -3,7 +3,7 @@ import React, { createContext } from "react";
 
 // src
 import { Notification } from "./Notification";
-import { useNotification } from "./useNotification";
+import { useNotification } from "./hooks/useNotification";
 
 export const NotificationContext = createContext();
 

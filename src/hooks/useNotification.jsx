@@ -1,10 +1,11 @@
+// lib
 import React from "react";
 
 export const useNotification = () => {
-  let [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
   const [message, setMessage] = React.useState("");
 
-  let showNotification = (message) => {
+  const showNotification = (message) => {
     setMessage(message);
     setIsOpen(true);
     setTimeout(() => {

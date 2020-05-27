@@ -1,7 +1,9 @@
 // lib
 import React from "react";
 import Snackbar from "@material-ui/core/Snackbar";
-import { useNotification } from "../useNotification";
+
+// src
+import { useNotification } from "../hooks/useNotification";
 
 export default function withNotification(Component) {
   return (props) => {

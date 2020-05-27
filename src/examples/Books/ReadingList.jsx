@@ -10,7 +10,7 @@ import { useNotificationContext } from "../../useNotificationContext";
 import "./Books.css";
 
 export const ReadingList = ({ name, onRemove }) => {
-  let { showNotification } = useNotificationContext();
+  const { showNotification } = useNotificationContext();
 
   return (
     <>
