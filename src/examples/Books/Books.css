@@ -7,3 +7,8 @@
   padding: 20px;
   min-width: 400px;
 }
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

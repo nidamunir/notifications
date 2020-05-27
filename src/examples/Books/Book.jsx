@@ -2,32 +2,27 @@
 import React from "react";
 import Bookmark from "@material-ui/icons/Bookmark";
 import IconButton from "@material-ui/core/IconButton";
-import Icon from "@material-ui/core/Icon";
 
 // src
 import withNotification from "../../hoc/withNotification";
 
-const Movie = ({ name, showNotification, onAddToReadingList }) => {
+// styles
+import "./Books.css";
+
+const BookInner = ({ name, showNotification, onAddToReadingList }) => {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-      }}
-    >
-      {name}
+    <div className="listItem">
+      <p>{name}</p>
       <IconButton
         onClick={() => {
           onAddToReadingList(name);
-          showNotification(name);
+          showNotification(`${name} is added to reading list.`);
         }}
       >
-        {/* <Icon>star</Icon>; */}
         <Bookmark />
       </IconButton>
     </div>
   );
 };
 
-export default withNotification(Movie);
+export const Book = withNotification(BookInner);

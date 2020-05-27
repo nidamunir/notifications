@@ -2,12 +2,12 @@
 import React, { useReducer } from "react";
 
 // src
-import Book from "./Book";
+import { Book } from "./Book";
+import { ReadingList } from "./ReadingList";
 import reducer, {
   ADD_TO_READING_LIST,
   REMOVE_FROM_READING_LIST,
 } from "../reducer";
-import Component from "./Component";
 
 // styles
 import "./Books.css";
@@ -41,7 +41,7 @@ const Books = () => {
       {/* Books */}
       <div className="list">
         <h2>Demo using withNotification HOC</h2>
-        {books.map((name, index) => (
+        {books.map((name) => (
           <Book name={name} onAddToReadingList={handleAdd} />
         ))}
       </div>
@@ -49,8 +49,8 @@ const Books = () => {
       {/* Reading List */}
       <div className="list">
         <h2>Demo using Context APi</h2>
-        {readingList.map((name, index) => (
-          <Component name={name} onRemove={handleRemove} />
+        {readingList.map((name) => (
+          <ReadingList name={name} onRemove={handleRemove} />
         ))}
       </div>
     </div>
