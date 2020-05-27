@@ -2,7 +2,7 @@
 import React from "react";
 
 // src
-import Component from "./Component";
+import Component from "./examples/Books/Component";
 import "./App.css";
 
 import { ContextProvider as NotificationProvider } from "./ContextProvider";
@@ -12,11 +12,11 @@ function App() {
   return (
     <div className="App">
       <NotificationProvider>
-        <h2>Demo using withNotification HOC</h2>
         <Books />
+
+        {/* <Component />
+        <Component /> */}
         <h5>*****************</h5>
-        <Component />
-        <Component />
       </NotificationProvider>
     </div>
   );
