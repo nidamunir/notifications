@@ -2,7 +2,6 @@
 import React from "react";
 
 // src
-import Component from "./examples/Books/Component";
 import "./App.css";
 
 import { ContextProvider as NotificationProvider } from "./ContextProvider";
@@ -13,10 +12,7 @@ function App() {
     <div className="App">
       <NotificationProvider>
         <Books />
-
-        {/* <Component />
-        <Component /> */}
-        <h5>*****************</h5>
+        <span>*_**_**_**_ Created By Nida Munir _**_**_**_*</span>
       </NotificationProvider>
     </div>
   );
